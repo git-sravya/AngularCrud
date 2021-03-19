@@ -16,10 +16,12 @@ export class CrudService {
     })
   }
   constructor(private httpClient: HttpClient) { }
+
   getAll(): Observable<Product[]> {
-    return this.httpClient.get<Product[]>(this.apiServer + '/products/')
-    
+    return this.httpClient.get<Product[]>(this.apiServer + '/products/')    
   }
+
+
   create(product): Observable<Product> {
     return this.httpClient.post<Product>(this.apiServer + '/products/', JSON.stringify(product), this.httpOptions)
     .pipe(
@@ -41,7 +43,7 @@ export class CrudService {
   }
 
   delete(id){
-    return this.httpClient.delete<Product>(this.apiServer + '/products/' + id, this.httpOptions)
+    return this.httpClient.delete<Product>(this.apiServer + '/products/' + id)
     .pipe(
       catchError(this.errorHandler)
     )

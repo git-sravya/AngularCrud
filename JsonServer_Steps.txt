@@ -1,2 +1,7 @@
 npm install -g json-server
-json-server --watch Employee.json
+
+In Command prompt change the directory to the location which has the json file and execute the command
+
+C:\Users\Sravya\Desktop\Angular\crudjson\src\assets>
+
+json-server --watch product.json

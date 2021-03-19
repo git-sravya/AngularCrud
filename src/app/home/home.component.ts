@@ -14,9 +14,10 @@ export class HomeComponent implements OnInit {
   constructor(public crudService: simpleCrudService) { }
 
   ngOnInit() {
-    console.log("hi");
+    //console.log("hi");
     this.crudService.getAll().subscribe((data: Product[])=>{
         this.products = data;
+        console.log(data);
     })  
   }
 
