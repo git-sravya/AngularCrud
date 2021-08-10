@@ -9,7 +9,7 @@ import { Product } from './product';
   providedIn: 'root'
 })
 export class CrudService {
-  private apiServer = "http://localhost:3000";
+  private apiServer = "http://localhost:62669/api";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -18,12 +18,12 @@ export class CrudService {
   constructor(private httpClient: HttpClient) { }
 
   getAll(): Observable<Product[]> {
-    return this.httpClient.get<Product[]>(this.apiServer + '/products/')    
+    return this.httpClient.get<Product[]>(this.apiServer + '/products')    
   }
 
 
   create(product): Observable<Product> {
-    return this.httpClient.post<Product>(this.apiServer + '/products/', JSON.stringify(product), this.httpOptions)
+    return this.httpClient.post<Product>(this.apiServer + '/products/', this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )

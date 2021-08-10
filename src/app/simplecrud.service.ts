@@ -9,7 +9,7 @@ import { Product } from './product';
   providedIn: 'root'
 })
 export class simpleCrudService {
-  private apiServer = "http://localhost:3000";
+  private apiServer = "http://localhost:62669/api";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -18,9 +18,9 @@ export class simpleCrudService {
   constructor(private httpClient: HttpClient) { }
 
   create(product): Observable<Product> {
-    return this.httpClient.post<Product>(this.apiServer + '/products/', JSON.stringify(product), this.httpOptions)
+    return this.httpClient.post<Product>(this.apiServer + '/products/', this.httpOptions)
     
-  }  
+  }   
   getById(id): Observable<Product> {
     return this.httpClient.get<Product>(this.apiServer + '/products/' + id)
    
@@ -28,7 +28,6 @@ export class simpleCrudService {
 
   getAll(): Observable<Product[]> {
     return this.httpClient.get<Product[]>(this.apiServer + '/products/')
-    
   }
 
   update(id, product): Observable<Product> {

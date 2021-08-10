@@ -1,0 +1,12 @@
+<p>multicheckbox works!</p>
+<form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
+
+    <div *ngFor="let CountryData of CountryData; let i=index">
+      <label>
+        <input type="checkbox" [value]="CountryData.value" (change)="onCheckboxChange($event)" />
+        {{CountryData.name}}
+      </label>
+    </div>
+  
+    <input type="submit" value="Submit">
+  </form>

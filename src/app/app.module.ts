@@ -11,6 +11,8 @@ import { UpdateComponent } from './update/update.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { DropdownDemoComponent } from './dropdown-demo/dropdown-demo.component';
+import { MulticheckboxComponent } from './multicheckbox/multicheckbox.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
     CreateComponent,
     UpdateComponent,
     MenuComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    DropdownDemoComponent,
+    MulticheckboxComponent
   ],
   imports: [
     BrowserModule,

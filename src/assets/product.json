@@ -2,10 +2,10 @@
   "products": [
     {
       "id": "2",
-      "name": "Refrigerator",
+      "name": "Refrigerator ",
       "description": "Whirlpool",
       "price": "100000",
-      "quantity": 10
+      "quantity": "30"
     },
     {
       "id": "3",
@@ -62,6 +62,13 @@
       "description": "Mobile",
       "price": "100000",
       "quantity": "1"
+    },
+    {
+      "id": "111",
+      "name": "Product Xyz",
+      "description": "Some new product",
+      "price": "112020",
+      "quantity": "2000"
     }
   ]
 }

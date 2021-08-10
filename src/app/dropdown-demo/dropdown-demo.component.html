@@ -1,0 +1,8 @@
+<p>dropdown-demo works!</p>
+<h4>Select Value</h4>
+
+<select name="my-select" [(ngModel)]="mySelect" (change)="selectChange()" >
+    <option [value]="item.id" *ngFor="let item of data">
+        {{item.name}}    
+    </option>
+</select>
